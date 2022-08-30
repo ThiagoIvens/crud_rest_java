@@ -23,8 +23,7 @@ public class User {
     private String login;
     @Column(nullable = false)
     private String password;
-    @ManyToOne
-    private User boss;
+    private Long boss;
 
     public Long getId() {
         return id;
@@ -68,10 +67,10 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    public User getBoss() {
+    public Long getBoss() {
         return boss;
     }
-    public void setBoss(User boss) {
+    public void setBoss(Long boss) {
         this.boss = boss;
     }
 }
